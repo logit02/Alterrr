@@ -1,0 +1,54 @@
+.land { 
+    max-width: 100%;
+    height: fit-content;
+    background-image: url('../../../Assets/Images/narrow.png');
+    background-size:cover;
+    background-repeat: no-repeat;  
+    padding-bottom: 40px; 
+}
+.texts { 
+   
+    padding-left: 10vh;
+    padding-top: 7vw;
+}
+.title-jobs {
+   width: 70vw;
+    font-size: 45px;
+    color: white;
+    font-family: 'Poppins-medium';
+    font-weight: 700;
+}
+#join-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+}
+#join-buttons > button{ 
+    
+    margin-right: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    color: #482BE7;
+    border:solid 2px transparent;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+    font-size: 12px;
+    
+}
+@media screen  and (max-width: 450px){
+    #join-buttons {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    #join-buttons > button{ 
+    
+        margin-bottom: 10px;
+        
+    }
+    .title-jobs {
+         font-size: 40px;
+     }
+}

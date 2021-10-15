@@ -1,0 +1,33 @@
+.collabs {
+    padding-top: 70px;
+    height: fit-content;
+    background-color: whitesmoke;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.collabs > p {
+    padding-top: 30px;
+    color:#151439;
+    opacity: 0.4;
+    font-size: 15px;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+}
+.collabs >h1 {
+    padding-top: 20px;
+    color:#1E0E62;
+    font-size: 33px;
+    font-family: 'Poppins-medium';
+    font-weight: 700;
+}
+#armath{ 
+    padding-top: 50px;
+    width: 130px;
+    height: 100px;
+} #uate{ 
+    padding-left: 6vw;
+    padding-top: 50px;
+    width: 220px;
+    height: 100px;
+}

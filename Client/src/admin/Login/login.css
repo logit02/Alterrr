@@ -1,0 +1,98 @@
+#wrap_login{ 
+display: flex;
+flex-direction: row;
+align-items: center;
+background-image: url('../../Assets/Images/landerr.png');
+background-size:cover;
+height: 100vh;
+
+}
+#right{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+ }
+ #form{
+     padding:30px;
+    border-radius: 7px;
+    background-color: white;
+    height: 53vh;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+ }
+ #form_wrap {
+     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+ }
+ #input_wrapper {
+     margin-top: 40px;
+     display: flex;
+     flex-direction: column;
+     margin-bottom: 10px;
+ }
+ .input{ 
+     width: 26vw;
+     height: 45px;
+     margin-bottom: 30px;
+     padding-left: 10px;
+     font-family: "Poppins-medium";
+     border-radius: 7px;
+     background-color: whitesmoke;
+     border:2px solid transparent;
+ }
+ #submit_button {
+     padding-left: 0px;
+     color: white;
+     border:2px solid #25DAC5;
+     background-color: #25DAC5;
+ }
+ #title_login {
+    color:#2F1893;
+    font-family: "Poppins-medium";
+    font-size: 35px;
+ }
+ @media screen  and (max-width: 1000px){
+    #form{
+        padding:40px;
+        width: 50%;
+     }
+     .input{ 
+        width: 40vw;
+        height: 45px;
+        margin-bottom: 30px;
+        padding-left: 10px;
+        font-family: "Poppins-medium";
+        border-radius: 7px;
+        background-color: whitesmoke;
+        border:2px solid transparent;
+    }
+ }
+ @media screen  and (max-width: 550px){
+#wrap_login{ 
+        background-image: url('../../Assets/Images/narrow.png');
+ }
+
+ #form{
+    padding:40px;
+    width: 70%; 
+ }
+ .input{ 
+    width: 70vw;
+    height: 45px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    font-family: "Poppins-medium";
+    border-radius: 7px;
+    background-color: whitesmoke;
+    border:2px solid transparent;
+}
+}

@@ -1,0 +1,102 @@
+.contact-all{ 
+    height: fit-content;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 30px;
+   
+}
+.title-contact{ 
+    color:#1E0E62;
+    font-size: 27px;
+    font-family: 'Poppins-medium';
+    font-weight: 700;
+}
+.desc-contact{ 
+    padding-top: 3vw;
+    color:#151439;
+    opacity: 0.4;
+    font-size: 16px;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+
+}
+.text-part-contact{ 
+    width: 50vw;
+    padding-top: 6vw;
+    text-align: left;
+    padding-left: 14vw;
+}
+.buttons-contact{
+    display: flex;
+    flex-direction: row;
+   
+}
+.button-contact, .button-contact-message{
+    width: 20vw;
+    margin-top: 2vw;
+    margin-right: 1vw;
+    height: 30px;
+    background-color: transparent;
+    border: solid 2px #EBEAED;
+    opacity: 0.7;
+    padding: 3px 3px 3px 7px;
+    border-radius: 30px;
+    padding-left: 14px;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+}
+.button-contact:focus, .button-contact-message:focus {
+    outline: none;
+}
+.button-contact-message {
+    width: 42vw;
+    height: 150px;
+    padding-top: 30px;
+    resize: none;
+    border-radius: 10px;
+    
+}
+#submit-contact{ 
+    background-color: #25DAC5;
+    border-radius: 30px;
+    height: 40px;
+    width: 110px;
+    border:solid 2px transparent;
+    color:white;
+    margin-top: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+}
+
+
+.logo-parts {
+    margin-top: 35px;
+    width: 40%;
+    background-image:url('../../../Assets/Images/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.38;
+}
+@media screen  and (max-width: 770px){
+    .buttons-part {
+        margin-top: 3vw;
+    }
+    .button-contact, .button-contact-message{
+        width: 60vw;
+    }
+    .big-logo{ 
+        display: none;
+    }
+}
+@media screen  and (max-width: 450px){
+    .buttons-contact{
+        flex-direction: column;
+    }
+    .button-contact, .button-contact-message{
+        width: 50vw;
+    }
+}
+

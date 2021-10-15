@@ -1,0 +1,151 @@
+
+
+
+.nav-all { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    align-items: center;
+    background-color: whitesmoke!important;
+    position: sticky; top: 0;
+    z-index: 1000;
+}
+.logo{
+    height: 300px;
+    
+}
+.nav-falled {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 260px;
+    width: 100%;
+    background-color: whitesmoke!important;
+    position: sticky; top: 0;
+    z-index: 1000;
+}
+.toggled-menu {
+    display: none;
+}
+.burger{
+   display: none;
+}
+.nav-left, .nav-logo{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.nav-logo {
+    margin-left: 60px;
+}
+.hidden-logo {
+    display: none;
+}
+.nav-logo > img {
+        height: 150px;
+        width: 150px;
+    }
+.nav-logo > p { 
+        margin-left: 10px;
+        color: #1E0E62;
+        font-size: 22px;
+        font-family: 'Poppins-medium';
+        font-weight: 700;
+    }
+.nav-items{
+        margin-left: 20px;
+}
+.items-menu {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    top:60px;
+    margin-left: 20px;
+}
+.link {
+       text-decoration: none;
+       margin-left: 25px;
+       color:#1E0E62;
+       font-size: 13px;
+       font-family: 'Poppins-light';
+       font-weight: 700;
+}
+.link:hover, .link-menu:hover{
+    color:#6c66c5c2;
+}
+.link-menu {
+    text-decoration: none;
+    margin-left: 25px;
+    color:#1E0E62;
+    font-size: 15px;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+    .sign-in, .sign-up {
+        height: 38px;
+        width: 90px;
+        border-radius: 30px;
+        margin-left: 10px;   
+        font-size: 13px;
+        font-family: 'Poppins-light';
+       font-weight: 700;
+    }
+    .sign-in {
+        background-color: transparent;
+        border: solid 1px transparent;
+    
+    }
+    .sign-in:hover {
+       color:#ff780c;
+    }
+    .sign-up {
+        background-color: #ff780c;
+        border: solid 1px #ff780c;
+        color: white;
+        margin-right: 100px;
+    }
+    .sign-up:hover {
+        background-color: #dd6300;
+        border: solid 1px #dd6300;
+        
+    }
+@media screen  and (max-width: 980px){
+    .sign-in, .sign-up {
+        display: none;
+    }
+    }
+@media screen  and (max-width: 770px){
+    .nav-logo{
+        margin-left: 0;
+    }
+    .nav-items{
+        display: none;
+    }
+    .burger{
+        margin-right: 20px;
+        display: block;
+     }
+     .toggled-menu {
+        display: block;
+    }
+    .nav-all, .nav-left{ 
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        height: 80px;
+        width: 100%;
+        align-items: center;
+       
+        
+    }
+    .sign-in, .sign-up{
+        display: none;
+    }
+   
+    
+}
+
+

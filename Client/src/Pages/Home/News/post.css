@@ -1,0 +1,131 @@
+.post {
+        width: 385px;
+        margin: 0px 25px 70px 25px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 7px;
+      }
+      
+      .postImg {
+        padding-bottom: 20px;
+        width: 385px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 7px;
+      }
+      
+      .postInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      
+      
+      .postTitle {
+        text-decoration: none;
+        font-family: Poppins-medium;
+        font-size: 24px;
+        font-weight: 900;
+        margin-top: 35px;
+        cursor: pointer;
+        color:#2F1893;
+      
+      }
+      
+      .postDate {
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 13px;
+        font-weight: 400;
+        color: #999999;
+        margin-top: 15px;
+      }
+      
+      .postDesc{
+
+        margin-left: 20px;
+        margin-right: 10px;
+        width: 90%;
+        font-family: "Varela Round", Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: #151439;
+        opacity: 0.5;
+        margin-top: 15px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        margin-bottom: 20px;
+        
+      }
+    
+      @media screen  and (max-width: 970px) and (min-width: 770px){
+        .post {
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 7px;
+            align-items: center;
+            
+          }
+          .postImg {
+            width: 40vw;
+            padding-bottom: 20px;
+            object-fit: cover;
+            border-radius: 7px;
+          }
+          .postDesc{
+            
+            margin-left: 0;
+            margin-right: 0;  
+          }
+
+      }
+
+      @media screen  and (max-width: 450px){
+        .post {
+          width: 84vw;
+          margin: 0px 0px 40px 0px;
+          flex-direction: row;
+          height: 25vw;
+          align-items: center;
+
+        }
+        .postImg {
+          object-fit: cover;
+          border-radius: 7px;
+          height: 100%;
+          width: 22vw;
+          padding-bottom: 0;
+          margin-right: 10px;
+        }
+        .postTitle {
+          text-decoration: none;
+          font-family: Poppins-medium;
+          font-size: 14px;
+          font-weight: 900;
+          margin-top: 20px;
+          cursor: pointer;
+          color:#2F1893;
+          
+        
+        }
+        .postDate {
+         display: none;
+        }
+        .postDesc{
+
+          margin-left: 5px;
+          font-size: 12px;
+          margin-bottom: 20px;
+          margin-right: 10px;
+          
+        }
+        
+      }

@@ -1,0 +1,116 @@
+#work {
+    height: fit-content;
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    
+}
+
+#sidebar{ 
+    width: 23%;
+    
+    
+}
+
+#main {
+    width: 80%;
+
+}#main_sidebar {
+    height: fit-content;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+    margin: 10px;
+   
+}
+#main_work {
+    padding-top: 50px;
+    height: fit-content;
+    background-color: whitesmoke;
+    margin: 10px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#search-div {
+    margin-left: 20px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#search {
+    width: 11vw;
+    height: 30px;
+    border-radius: 30px;
+    border:solid 2px transparent;
+    padding-left: 10px;
+    font-size: 14px;
+}
+#search:focus {
+    outline: none;
+}
+#cat{ 
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 2vw;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+    font-size: 13px;
+}
+#cat > div {
+    width: 90%;
+    margin-top: 20px;
+}
+#filter {
+    margin-top: 40px;
+    height: 30px;
+    width: 90px;
+    border-radius: 30px;
+    border:solid 2px transparent;
+    color: white;
+    background-color:#25DAC5 ;
+    font-size: 14px;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+}
+.check_title {
+    font-family: 'Poppins-medium';
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 20px;
+    color:#2F1893 ;
+}
+@media screen  and (max-width: 870px){
+    #work {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;  
+    }
+    #sidebar{ 
+        width: 50%; 
+    }
+    #main {
+        width: 100%;
+    }
+    #main_sidebar {
+        width: 100%;
+        height: fit-content;
+        background-color: whitesmoke;
+        margin: 10px
+       
+    }
+    #main_work {
+        height: fit-content;
+        background-color: whitesmoke;
+        margin: 10px;  
+    }
+    #search {
+        width: 28vw;
+        
+    }
+    
+}

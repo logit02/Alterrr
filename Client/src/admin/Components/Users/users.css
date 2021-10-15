@@ -1,0 +1,27 @@
+.users_wrapper {
+    background-color: #FFFFFF;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.users_title {
+    font-family: Poppins-medium;
+    font-size: 40px;
+    color:#9381FF;
+    margin-left: 4vw;
+    margin-top: 6vh;
+}
+.bottom {
+        padding-left: 50px;
+        width: 90%;
+        height: 100%;
+        margin-top: 30px;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;   
+}
+@media screen  and (max-width: 450px){
+    .bottom {
+        padding-left: 20px;
+}
+}

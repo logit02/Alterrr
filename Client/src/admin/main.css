@@ -1,0 +1,48 @@
+.main_container { 
+    display: flex;
+    flex-direction: row;
+    
+}
+.main_left { 
+    width: 15%;
+}
+.main_right {
+    width: 65%;
+}
+.panel {
+    width: 20%;
+    background-color: #A69ED6;
+}
+.panel_wraper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#greet_user { 
+    color: #F4F2FB;
+    font-family: "Poppins-medium";
+    font-size: 24px;
+}
+#lives{ 
+    padding-top: 30px;
+    color: #F4F2FB;
+    font-family: "Poppins-light";
+    font-size: 17px;
+}
+@media screen  and (max-width: 450px){
+    .main_container { 
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .main_left { 
+        width: 100%;
+    }
+    .main_right {
+        width: 100%;
+    }
+    .panel {
+        width: 100%;
+    }
+}

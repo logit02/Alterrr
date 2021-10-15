@@ -1,0 +1,117 @@
+.singlePost {
+    margin-left: 100px;
+    margin-right: 100px;
+    flex: 9;
+  }
+  .singlePostWrapper {
+    padding: 20px;
+    padding-right: 0;
+  }
+  .singlePostImg {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit:cover;
+  }
+  .singlePostTitle {
+    font-family: Poppins-medium;
+    text-align: center;
+    margin: 10px;
+    margin-top: 30px;
+    font-size: 28px; 
+  }
+  .singlePostInfo {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+  }
+  
+  .singlePostAuthor{
+    text-decoration: none;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
+    margin-left: 5px;
+  }
+  
+  .singlePostDesc {
+    
+    margin-top: 40px;
+    color: #666;
+    font-size: 18px;
+    line-height: 30px;
+    
+  }
+  
+  .singlePostDesc::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .trash { 
+    margin-left: 10px;
+    width: 23x;
+    height: 23px;
+  }
+
+  .comment-section { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius:6px;
+    border: solid 2px transparent;
+    background-color: #6CCFF6;
+    display: flex;
+    height: 60px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    align-items: center;
+  }
+ .comment-box { 
+   align-items: center;
+   padding-left: 20px;
+   border: solid 2px transparent;
+   background-color: rgb(243, 241, 241);
+   margin-left: 10px;
+   align-items: center; 
+   width: 890px;
+   height: 60px;
+   font-size: 13px;
+   font-family: Poppins-light;
+   border-right:solid 2px #6CCFF6 ;
+ }
+
+ .comment-box:focus {
+   outline-style: none;
+ }
+
+ .publish-comment { 
+   color: white;
+   font-family: Poppins-light;
+   margin-left: 0px;
+   border-radius: 20px;
+   border: solid 2px transparent;
+   background-color: transparent;
+   width: 80px;
+   height: 30px;
+ }
+
+ .user-image { 
+  
+   border-radius: 50px;
+   width: 40px;
+   height: 40px;
+   margin-left: 10px;
+ }
+
+ .title-comments{ 
+   margin-top: 150px;
+   text-align: center;
+   width: 100%;
+   font-family: Poppins-medium;
+   font-size: 25px;
+ }

@@ -1,0 +1,113 @@
+#about_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+}
+#people {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.partition{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.img_people {
+    padding: 40px;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+}
+#about_title {
+    font-size: 40px;
+    font-family: "Poppins-medium";
+    color:#482BE7;
+}
+.people_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 10px;
+}
+.name {
+    font-size: 32px;
+    font-family: "Poppins-medium";
+    padding: 10px;
+   
+}
+.position {
+    padding: 10px;
+    background-color: #482BE7;
+    font-size: 15px;
+    font-family: "Poppins-medium";
+    border-radius: 7px;
+    color: white;
+}
+.change_image{ 
+    height: 350px;
+    width: 350px;
+    background-image: url('../../Assets/Images/inesa1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+}
+.change_image:hover {
+    background-image: url("../../Assets/gif/inesagif.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.change_image_garik{ 
+    height: 350px;
+    width: 350px;
+    background-image: url('../../Assets/Images/garik.jpg');
+    background-size: contain;
+    border-radius: 100%;
+}
+.change_image_garik:hover{
+    background-image: url('../../Assets/gif/garikgif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.change_image_edik{ 
+    height: 350px;
+    width: 350px;
+    background-image: url('../../Assets/Images/edik.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+} 
+.change_image_edik:hover{
+    background-image: url('../../Assets/gif/edikgif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.change_image_suren{ 
+    height: 350px;
+    width: 350px;
+    background-image: url('../../Assets/Images/suren.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 100%;
+} 
+.change_image_suren:hover{
+    background-image: url('../../Assets/gif/surenngif.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+@media screen  and (max-width: 750px){
+    #people {
+        flex-direction: column;
+    }
+    .people_items{
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.land-all { 
+    width: 100%;
+    height: fit-content;
+    background-image: url('../../../Assets/Images/landerr.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    
+}
+.back { 
+    padding-bottom: 180px;
+}
+.vector{ 
+    width: 300px;
+    margin-right: 40px;
+}
+
+.land-title {
+    font-size: 60px;
+    color: white;
+    width: 65vw;
+    font-family: 'Poppins-medium';
+    font-weight: 700;
+    padding-bottom: 40px;
+    
+
+}
+.land-desc {
+    color: white;
+    margin-top: 40px;
+    font-size: 25px;
+    width: 65vw;
+    font-family: 'Poppins-light';
+    font-weight: 700;
+}
+.text-value {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 11vw;
+    text-align: left;
+
+}
+.buttons-land{
+    width: 65vw;
+    margin-left: 50px;
+    margin-top: 40px;
+    text-align: left;
+    
+}
+.buttons-land > button:nth-child(2) {
+    background-color: #25DAC5;
+    color:white;
+    border: none;
+}
+.button-land { 
+    height: 45px;
+    width: 130px;
+    border-radius: 30px;
+    border:solid 1px transparent;
+    background-color: white;
+    margin-left: 20px;
+    color: #482BE7;
+    font-size: 15px;
+    font-family: 'Poppins-medium';
+   
+}
+@media screen  and (max-width: 770px){
+    .land-all { 
+        width: 100%;
+        height: fit-content;
+        background-image: url('../../../Assets/Images/mobile.png');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+    .back{
+        background-color:rgba(47, 24, 147, 0.6);
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .text-value {
+        margin-left: 15vw;
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        padding-top: 100px;
+        text-align: left;
+    
+    }
+    .buttons-land{
+        text-align: left;
+        width: 70vw;
+        margin-top: 40px;
+    }
+    
+}
+
+@media screen  and (max-width: 450px){
+    .land-title {
+        font-size: 40px;
+    }
+    .land-desc {
+        font-size: 19px;
+    }
+    .buttons-land{
+        display: flex;
+        flex-direction: column;
+        width: 65vw;
+        margin-left: 40px;
+        margin-top: 40px;
+      
+    } 
+    .button-land {
+        margin-bottom: 20px;
+    }
+    .back { 
+        padding-bottom: 60px;
+    }
+}
+

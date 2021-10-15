@@ -1,0 +1,219 @@
+.signin { 
+    height: 100vh;
+    background-image:url('../../Assets/Images/landerr.png') ;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+
+}
+.text-area {
+    margin-top: 10vw;
+    width: 50vw;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+#title {
+    color:white;
+    font-size: 65px;
+    font-weight: 600;
+    width: 35vw;
+    font-family: "Poppins-medium";
+}
+#desc{ 
+    color:white;
+    padding-top: 3vw;
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.7;
+    width: 41vw;
+    font-family: "Poppins-light";
+}
+#learn-more{ 
+    height: 40px;
+    width: 120px;
+    border: solid 2px transparent;
+    border-radius: 30px;
+    margin-top: 4vw;
+    background-color: #E93A7D;
+    color:white;
+    font-size: 15px;
+    font-family: "Poppins-medium";
+}
+
+.form-area{ 
+    width: 40vw;
+    background-color: transparent;
+    height: 50vh;
+    margin-top: 6vw;
+    
+}
+.top {
+    
+    height: 13vh;
+}
+.error{ 
+    font-size: 14px;
+    margin-top: 50px;
+    color:#0e0925 ;
+    opacity: 0.3;
+}
+.wh-area{ 
+    width: 35vw;
+    background-color: #EBEAED;
+    height: 75vh;
+    border-radius:14px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#wh-title{ 
+    color:#2F1893;
+    font-size: 30px;
+    padding-top: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+    font-family: "Poppins-medium";
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+.sign-buttons{ 
+   
+    width: 300px;
+    height: 40px;
+    background-color: transparent;
+    border:solid 2px #d8d6db;
+    padding-left: 10px;
+    border-radius: 30px;
+    margin-bottom:2vh;
+    
+}
+.sign-buttons:focus{
+    outline: none;
+}
+#signup , .signup-fb{
+  
+    width: 300px;
+    height: 35px;
+    background-color: transparent;
+    border:solid 2px #25DAC5;
+    background-color: #25DAC5;
+    padding-left: 10px;
+    border-radius: 30px;
+    margin-bottom:10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins-medium";
+}
+#signup:hover{ 
+    border:solid 2px #E93A7D ;
+    background-color:#E93A7D ;
+}
+.logs { 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.signup-fb{ 
+    border:solid 2px #4267B2;
+    background-color:#4267B2 ;
+}
+
+.haveacc { 
+    padding-top: 0px;
+}
+#haveaccount{ 
+    
+    color:#151439;
+    opacity: 0.4;
+    font-size: 14px;
+    font-weight: 600;
+}
+#signin {
+    
+    color:#25DAC5;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.haveacc {
+    display: flex;
+    align-items: center;
+    font-family: "Poppins-light";
+}
+@media screen  and (max-width: 1100px){
+    .signin {
+        display: flex;
+        flex-direction: column; 
+        height: 100vh;
+        align-items: center;
+        background-color: red;
+    }
+    .form-area{ 
+        width: 40vw;
+    }   
+    
+    .wh-area{ 
+        width: 45vw;
+        background-color: #EBEAED;
+        height: 80vh;
+        border-radius:14px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+   
+    .text-area {
+        display: none;
+    }
+}
+@media screen  and (max-width: 750px){
+    .form-area{ 
+        width: 80vw;
+        margin-top: 10vh;
+        
+    }   
+    
+    .wh-area{ 
+        width: 100%;
+        background-color: #EBEAED;
+        height: 80vh;
+        border-radius:14px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+   
+
+}
+@media screen  and (max-width: 450px){
+    .signin {
+        display: flex;
+        flex-direction: column; 
+        height: 100vh;
+        align-items: center;
+    }
+    .form-area{ 
+        width: 90vw;
+        margin-top: 40vw;
+    }   
+    
+    .wh-area{ 
+        width: 100%;
+        background-color: #EBEAED;
+        height: 60vh;
+        border-radius:14px;   
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

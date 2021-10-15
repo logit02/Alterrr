@@ -1,0 +1,43 @@
+.pagination {
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.page-item {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.page-link {
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Poppins-medium';
+    font-size: 16px;
+    color: black;
+    
+}
+.page-link:hover { 
+   color:pink;
+}
+.icons {
+    height: 30px;
+    width: 30px;
+}
