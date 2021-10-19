@@ -1,42 +1,77 @@
 import './news.css'
 import MaterialTable from "material-table";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import axios from 'axios'
 import { axiosInstance } from '../../../config';
-export default function Leads(){
-  
-      const columns = [
-        {
-          title: "id",
-          field: "_id",
-        },
-        {
-          title: "Title",
-          field: "title",
-        },
-        {
-          title: "Photo",
-          field: "photo",
-        },
-        {
-          title: "Date",
-          field: "createdAt",
-        }
-      ];
+//notifs
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+//main
 
-      const [data, setdata]= useState([])
-      useEffect(() => {
-        const fetchNews = async () => {
-            const res = await axiosInstance.get('/news')
-            setdata(res.data)
-            console.log(res.data)
-        } 
-        fetchNews();
+export default function Leads(){
+  const titleRef = useRef(); 
+  const imageRef = useRef(); 
+  const descRef = useRef();
+  const [mess, setMess] = useState('')
+  const notify = () => toast(mess);
+  const alertmess = () => toast("No data provided")
+  const columns = [
+    {
+      title: "id",
+      field: "_id",
+    },
+    {
+      title: "Title",
+      field: "title",
+    },
+    {
+      title: "Photo",
+      field: "photo",
+    },
+    {
+      title: "Date",
+      field: "createdAt",
+    }
+  ];
+
+  const [data, setdata]= useState([])
+  useEffect(() => {
+    const fetchNews = async () => {
+      const res = await axiosInstance.get('/news')
+      setdata(res.data)
+    } 
+    fetchNews();
     }, [])
-    console.log(data)
     
+  const handleNews = async () => {
+
+    const newsdata = {
+      title : titleRef.current.value,
+      desc : descRef.current.value,
+      photo : imageRef.current.value
+    }
+    const config = {
+      headers: {"authorization":localStorage.getItem('token')}
+    }
+    
+    console.log(Boolean(newsdata))
+    if(Boolean(newsdata.title) && Boolean(newsdata.desc) && Boolean(newsdata.photo)){
+    await axiosInstance.post('/news', newsdata, config)
+
+    .then((res) => {
+      setMess(res.data.message)
+      titleRef.current.value=''
+      descRef.current.value=''
+      imageRef.current.value=''
+      notify();
+    })
+  }else{
+    alertmess();
+  }
+  }
     return(
         <div className='leads_wrapper'>
+          
             <div className='top'>
                 <p className='news_title'>News</p>
             </div>
@@ -51,15 +86,16 @@ export default function Leads(){
             <div className='write_news'>
               <p className='news_title'>Create a News</p>
               <div className='write_container'>
-                <input placeholder='title' type='text' className='inputs'></input>
-                <input placeholder='URL of your image' type='text' className='inputs'></input>
+                <input placeholder='title' type='text' className='inputs' ref={titleRef}></input>
+                <input placeholder='URL of your image' type='text' className='inputs' ref={imageRef}></input>
                 <select className='dropdown'>
                   <option value="Armenia" className='options'>Armenia</option>
                   <option value="Worldwide" className='options'>Worldwide</option>
                  
                 </select>
-                <textarea className='text_input' placeholder='Tell us your fascinating story'></textarea>
-                <button id ='submit'>Submit</button>
+                <textarea className='text_input' placeholder='Tell us your fascinating story' ref={descRef}></textarea>
+                <ToastContainer />
+                <button id ='submit' onClick={handleNews}>Submit</button>
               </div>
             </div>
         </div>

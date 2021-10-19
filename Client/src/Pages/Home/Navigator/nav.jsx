@@ -7,37 +7,27 @@ import { useState } from 'react'
 
 export default function Navigator(){
     const [isOpen, setOpen] = useState(false)
-    const signin = () => {
+    const signup = () => {
         window.location='/signin'
     }
-    const signup = () => {
-        window.location='/boot'
-    }
-    
-
     <Hamburger onToggle={toggled => {
         if (toggled) {
-           // open a 
            setOpen(!isOpen)
         }
-        
       }} />
-
-   
     return(
     <div className={!isOpen ? 'nav-all' : "nav-falled"}>
        
         <div className='nav-left'>
             <div className={!isOpen ? 'nav-logo': "hidden-logo"}>
-                <img src = {logo} alt='logo' className='logo'/>
-                {/*<p>alterrr.com</p>*/} 
+                <img src = {logo} alt='logo' className='logo'/> 
             </div>
             <div className={!isOpen ? 'nav-items' : "items-menu"}>
-                <Link  to='/home'className={!isOpen? 'link' : "link-menu"}>Գլխավոր</Link>
-                <Link to='/about' className={!isOpen? 'link' : "link-menu"}>Մեր Մասին</Link>
-                <Link to='/allnews' className={!isOpen? 'link' : "link-menu"}>Նորություններ</Link>
-                <Link to='/allnews' className={!isOpen? 'link' : "link-menu"}>Բլոգ</Link>
-                <Link to='/job' className={!isOpen? 'link' : "link-menu"}>ԱՇխատանք</Link>
+                <Link  to='/home'className={!isOpen? 'link' : "link-menu"}>Home</Link>
+                <Link to='/about' className={!isOpen? 'link' : "link-menu"}>About Us</Link>
+                <Link to='/allnews' className={!isOpen? 'link' : "link-menu"}>News</Link>
+                <Link to='/allnews' className={!isOpen? 'link' : "link-menu"}>Blog</Link>
+                <Link to='/job' className={!isOpen? 'link' : "link-menu"}>Job</Link>
 
             </div>
         </div>
@@ -47,8 +37,8 @@ export default function Navigator(){
             </div>
        
 
-        <button onClick = {signin} className='sign-in'>Մուտք</button>
-        <button className='sign-up' onClick = {signup}>Գրանցվել</button>
+        
+        <button className='sign-up' onClick = {signup}>Post a job</button>
        
         </div>
     </div>)

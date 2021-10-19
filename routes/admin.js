@@ -8,6 +8,34 @@ router.use(cors());
 const jwt = require('jsonwebtoken')
 const Admin = require('../models/Admin')
 
+
+const verify = (req,res,next) => {
+    const authHeader = req.headers.authorization;
+    if(authHeader) {
+        const token = authHeader.split(' ')[1]
+        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
+            if(err){
+                return res.status(403).json({
+                    error:true,
+                    message:"wrong token",
+                })
+            }
+
+            req.payload = payload; 
+            next()
+        })
+    }else{ 
+        res.status(401).json({
+            error:true,
+            message:"No header",
+        })
+    }
+}
+
+router.get('/isauth', verify, (req,res) => {
+    res.send("you are all good")
+})
+
 router.post('/register', async (req,res) => {
     try {
         const salt = await bcrypt.genSalt(10);

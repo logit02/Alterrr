@@ -1,5 +1,5 @@
 .signin { 
-    height: 100vh;
+    height: 110vh;
     background-image:url('../../Assets/Images/landerr.png') ;
     background-size: cover;
     display: flex;
@@ -44,13 +44,13 @@
 .form-area{ 
     width: 40vw;
     background-color: transparent;
-    height: 50vh;
-    margin-top: 6vw;
+    height: 60vh;
+    margin-top: 4vw;
     
 }
 .top {
     
-    height: 13vh;
+    height: 8vh;
 }
 .error{ 
     font-size: 14px;
@@ -61,7 +61,7 @@
 .wh-area{ 
     width: 35vw;
     background-color: #EBEAED;
-    height: 75vh;
+    height: 85vh;
     border-radius:14px;   
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
 #wh-title{ 
     color:#2F1893;
     font-size: 30px;
-    padding-top: 20px;
+    padding-top: 30px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 5px;
@@ -83,7 +83,7 @@
 }
 .sign-buttons{ 
    
-    width: 300px;
+    width: 350px;
     height: 40px;
     background-color: transparent;
     border:solid 2px #d8d6db;
@@ -97,12 +97,11 @@
 }
 #signup , .signup-fb{
   
-    width: 300px;
-    height: 35px;
+    width: 350px;
+    height: 40px;
     background-color: transparent;
     border:solid 2px #25DAC5;
     background-color: #25DAC5;
-    padding-left: 10px;
     border-radius: 30px;
     margin-bottom:10px;
     color: white;
@@ -110,10 +109,7 @@
     font-weight: 600;
     font-family: "Poppins-medium";
 }
-#signup:hover{ 
-    border:solid 2px #E93A7D ;
-    background-color:#E93A7D ;
-}
+
 .logs { 
     display: flex;
     flex-direction: column;
@@ -153,16 +149,15 @@
         flex-direction: column; 
         height: 100vh;
         align-items: center;
-        background-color: red;
     }
     .form-area{ 
-        width: 40vw;
+        width: 55vw;
     }   
     
     .wh-area{ 
-        width: 45vw;
+        width: 55vw;
         background-color: #EBEAED;
-        height: 80vh;
+        height: 84vh;
         border-radius:14px;   
         display: flex;
         flex-direction: column;

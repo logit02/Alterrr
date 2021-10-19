@@ -1,25 +1,31 @@
 import './contact.css'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import axios from 'axios';
 import { axiosInstance } from '../../../config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Contact(){
     const nameRef = useRef();
     const emailRef = useRef();
     const phoneRef = useRef();
     const messageRef = useRef();
+    const [mess,setMess]= useState('')
+    const notify = () => toast(mess);
 
     const handleContact = async () => {
-        const res = await axiosInstance.post('/contact', {
+       await axiosInstance.post('/contact', {
             name:nameRef.current.value,
             email:emailRef.current.value,
             phone:phoneRef.current.value,
             message:messageRef.current.value
+        }).then((res)=> {
+            setMess(res.data.message)
+            nameRef.current.value=''
+            emailRef.current.value=''
+            phoneRef.current.value=''
+            messageRef.current.value=''
+            notify();
         })
-        nameRef.current.value=''
-        emailRef.current.value=''
-        phoneRef.current.value=''
-        messageRef.current.value=''
-        
 }
     return(
         <div className='contact-all'>
@@ -40,6 +46,7 @@ export default function Contact(){
                     </div>
                         <textarea className='button-contact-message' type='text' placeholder=' Write your message here' ref = {messageRef}/>
                 </div>
+                <ToastContainer />
                 <button id='submit-contact' onClick={handleContact}>Submit</button>
             </div>
            {/* <img src = {logo} alt='logo' className='big-logo'/> */}

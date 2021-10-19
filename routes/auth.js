@@ -19,19 +19,21 @@ const verify = (req,res,next) => {
             if(err){
                 return res.status(403).json({
                     error:true,
-                    message:"",
+                    message:"Wrong token",
                 })
             }
+
             req.payload = payload; 
             next()
         })
     }else{ 
         res.status(401).json({
             error:true,
-            message:"some normal error",
+            message:"No header",
         })
     }
 }
+
 // register
 router.post('/register', async (req,res) => {
     try {
@@ -54,7 +56,7 @@ router.post('/register', async (req,res) => {
 
 //login
 
-router.post('/login', async (req, res) => {
+router.post('/login', verify ,async (req, res) => {
     try{
     const user = await User.findOne({username:req.body.username});
     !user && res.status(400).json("Wrong creditentials");

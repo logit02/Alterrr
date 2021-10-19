@@ -13,6 +13,7 @@ export default function Sidebar(){
     const handleLogout = () => { 
         localStorage.removeItem("token");
         window.location.reload();
+        window.location = '/home'
        
     }
     return(

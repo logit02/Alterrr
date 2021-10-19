@@ -65,12 +65,12 @@
     margin-left: 20px;
 }
 .link {
-       text-decoration: none;
-       margin-left: 25px;
-       color:#1E0E62;
-       font-size: 13px;
-       font-family: 'Poppins-light';
-       font-weight: 700;
+    text-decoration: none;
+    margin-left: 25px;
+    color:#1E0E62;
+    font-size: 14px;
+    font-family: 'Poppins-medium';
+    font-weight: 400;
 }
 .link:hover, .link-menu:hover{
     color:#6c66c5c2;
@@ -86,11 +86,11 @@
 }
     .sign-in, .sign-up {
         height: 38px;
-        width: 90px;
+        width: 110px;
         border-radius: 30px;
         margin-left: 10px;   
         font-size: 13px;
-        font-family: 'Poppins-light';
+        font-family: 'Poppins-medium';
        font-weight: 700;
     }
     .sign-in {

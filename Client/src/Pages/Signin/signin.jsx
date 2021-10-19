@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux'
 import { update } from "../../redux/userSlice"
+import { Link } from 'react-router-dom';
 
 
 export default function Signin(){
@@ -13,6 +14,11 @@ export default function Signin(){
     const [error,setError] = useState("");
     const usernameRef = useRef();
     const passwordRef = useRef();
+    const companyNameRef = useRef();
+    const emailRef=useRef();
+    const passwordcheclRef = useRef();
+    const sizeRef=useRef();
+    
     const history = useHistory();
     
     const userfocusHandle =() => {
@@ -28,6 +34,7 @@ export default function Signin(){
     const handleSignin = async (e) => {
         setError("");
         e.preventDefault(); 
+        
         //login & password validation 
         let regex = new RegExp("^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$");
         var passregex = new RegExp("(?=.{8,20})");
@@ -69,21 +76,23 @@ export default function Signin(){
             <div className='form-area'>
                 <div className='wh-area'>
                     <div className='top'>
-                        <p id='wh-title'>Sign In </p>
+                        <p id='wh-title'>Sign Up As a Collaborator </p>
                         <p className='error'>{error}</p>
                     </div>
                     <div className='buttons'>
-                        
-                        <input className='sign-buttons' placeholder='Your email' type='email' ref = {usernameRef} onFocus={userfocusHandle} />
+                        <input className='sign-buttons' placeholder='Company Name' type='text' ref = {companyNameRef} onFocus={userfocusHandle} />
+                        <input className='sign-buttons' placeholder='Your name' type='text' ref = {usernameRef} onFocus={userfocusHandle} />
+                        <input className='sign-buttons' placeholder='Company Size' type='number' min='0'ref = {sizeRef} onFocus={userfocusHandle} />
+                        <input className='sign-buttons' placeholder='Work email' type='email' ref = {emailRef} onFocus={userfocusHandle} />
                         <input className='sign-buttons' placeholder='Your password' type='password' ref = {passwordRef}  onFocus={passfocusHandle}/>
+                        <input className='sign-buttons' placeholder='Repeat the password' type='password' ref = {passwordcheclRef}  onFocus={passfocusHandle}/>
                     </div>
                     <div className='logs'>
-                        <button id='signup' onClick = {handleSignin}>Sign In </button>
-                        <button className='signup-fb'>Login via Facebook </button>
+                        <button id='signup' onClick = {handleSignin}>Join</button>
                     </div>
                     <div className='haveacc'>
-                        <p id='haveaccount'>Don't have an accout?</p>
-                        <p id='signin'>Sign up</p>
+                        <p id='haveaccount'>Do have an accout?</p>
+                        <Link id='signin' to ='/business'>Sign in </Link>
                     </div>
                     
                 </div>

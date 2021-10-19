@@ -17,6 +17,7 @@ import Main from './admin/main.js'
 import News_lander from './Pages/Home/News/News_lander'
 import Login from './admin/Login/login'
 import About from './Pages/AboutUs/about'
+import Account from './Pages/Business/Account/account'
 //= imports from react
 import {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
@@ -37,7 +38,7 @@ function App() {
   const token = localStorage.getItem('token');
   const user = useSelector(state => state.user)
   const admin = useSelector(state => state.admin)
- 
+  
 
  useEffect( () => {
   const fetchNews = async () => {
@@ -45,7 +46,10 @@ function App() {
       setNews(res.data.slice(0,3))
   } 
    fetchNews();
+  
 },[])
+
+
 
 
   return (
@@ -90,6 +94,9 @@ function App() {
         </Route>
         <Route path='/admin'>
             {token ? <Main /> : <Login /> }
+        </Route>
+        <Route path='/business'>
+           <Account />
         </Route>
       
         <Redirect from ='/' to='/home'></Redirect>

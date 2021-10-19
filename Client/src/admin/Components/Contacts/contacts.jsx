@@ -26,18 +26,16 @@ export default function Contacts(){
             field: "createdAt",
           }
       ];
-
       const [data, setdata]= useState([])
-      useEffect(() => {
-        const fetchNews = async () => {
-            const res = await axiosInstance.get('/contact')
-            setdata(res.data)
-            console.log(res.data)
-        } 
-        fetchNews();
+
+  useEffect(() => {
+    const fetchNews = async () => {
+    const res = await axiosInstance.get('/contact')
+      setdata(res.data)
+    } 
+    fetchNews();  
     }, [])
-    console.log(data)
-    
+
     return(
         <div className='contacts_wrapper'>
             <div className='top'>

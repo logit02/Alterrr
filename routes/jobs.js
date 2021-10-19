@@ -3,6 +3,8 @@ const Job = require('../models/Job')
 const cors = require('cors');
 router.use(cors());
 
+//verify
+
 //get all jobs 
 router.get('/', async (req,res) => {
     try{ 

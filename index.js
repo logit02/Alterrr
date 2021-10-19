@@ -40,8 +40,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '/Client/build', 'index.html'));
 });*/
 
-//etse
-app.use(express.static(path.join(__dirname, "/Client/build")));
+
+//app.use(express.static(path.join(__dirname, "/Client/build")));
 
 
 app.listen(process.env.PORT || 5000, ()=> {

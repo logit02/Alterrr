@@ -11,7 +11,7 @@ export default function SingleWork(){
     
     useEffect(() => {
         const getJob = async () => {
-            const res = await axios.get('http://localhost:5000/jobs/'+ path)
+            const res = await axiosInstance.get('/jobs/'+ path)
             myJob(res.data)
         }
         getJob();
@@ -29,15 +29,16 @@ export default function SingleWork(){
         <h1 className="singlePostTitle">
         {job.job_title}  
         </h1>
-        <div className="singlePostInfo">
-         
-        </div>
-        <p className="singlePostDesc">
+        <p className="postDesc">
           {job.description}
           
         </p>
     </div>
-      
+    <div id='apply-but'>
+      <button className='job_apply'>Apply</button>
+      <button className='job_apply' id='web'>Visit the website</button>
+      </div>
+
   </div>
     )
 }
