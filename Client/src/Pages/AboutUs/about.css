@@ -107,6 +107,9 @@
     #people {
         flex-direction: column;
     }
+    .partition {
+        flex-direction: column;
+    }
     .people_items{
         margin-bottom: 20px;
     }
