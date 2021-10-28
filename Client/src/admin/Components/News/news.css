@@ -79,6 +79,13 @@
 #submit:hover{ 
     background-color: #6146fa;
 }
+#rich_text {
+    background-color: white;
+    height: 200px;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+}
 @media screen  and (max-width: 450px){
     .write_news {
         height: 120vh;

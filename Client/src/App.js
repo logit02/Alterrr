@@ -34,7 +34,6 @@ import {useSelector} from 'react-redux'
 
 function App() {
   const [news, setNews] = useState([])
-  //const cook = document.cookie.split(`${'token'}=`)[1]
   const token = localStorage.getItem('token');
   const user = useSelector(state => state.user)
   const admin = useSelector(state => state.admin)

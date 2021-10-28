@@ -9,8 +9,7 @@ export default function Contact(){
     const emailRef = useRef();
     const phoneRef = useRef();
     const messageRef = useRef();
-    const [mess,setMess]= useState('')
-    const notify = () => toast(mess);
+    const notify = (mess) => toast(mess);
 
     const handleContact = async () => {
        await axiosInstance.post('/contact', {
@@ -19,12 +18,14 @@ export default function Contact(){
             phone:phoneRef.current.value,
             message:messageRef.current.value
         }).then((res)=> {
-            setMess(res.data.message)
+            console.log(res.data)
+            const mess = res.data
             nameRef.current.value=''
             emailRef.current.value=''
             phoneRef.current.value=''
             messageRef.current.value=''
-            notify();
+            notify(mess)
+            
         })
 }
     return(

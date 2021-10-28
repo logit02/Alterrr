@@ -19,7 +19,7 @@ export default function Login () {
                 password:pass,
             }).then (data => {
                 const accessToken = data.data.accessToken;
-               
+               console.log(accessToken)
                 localStorage.setItem('token', accessToken);
                 dispatch(update({
                     name:user,

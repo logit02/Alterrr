@@ -5,6 +5,7 @@ import Sidebar from './Components/Sidebar/sidebar'
 import Contacts from './Components/Contacts/contacts'
 import Posts from './Components/Posts/posts'
 import Users from './Components/Users/users'
+import Jobs from './Components/Jobs/Jobs'
 import {Switch, Route, Redirect} from 'react-router-dom'
 export default function Main(){
     const token = localStorage.getItem('token')
@@ -30,6 +31,9 @@ export default function Main(){
                 </Route>
                 <Route exact path = '/admin/settings'>
                     <Home />
+                </Route>
+                <Route exact path = '/admin/jobs'>
+                    <Jobs />
                 </Route>
                 <Route exact path = '/admin/users'>
                     <Users />

@@ -32,9 +32,7 @@ const verify = (req,res,next) => {
     }
 }
 
-router.get('/isauth', verify, (req,res) => {
-    res.send("you are all good")
-})
+
 
 router.post('/register', async (req,res) => {
     try {

@@ -6,6 +6,7 @@ import Filter from '../../icons/Filter 3.png'
 import logo from '../../../Assets/Images/small.png'
 import User from '../../icons/Profile.png'
 import Post from '../../icons/Edit.png'
+import Work from '../../icons/Work.png'
 import {BrowserRouter, Link} from 'react-router-dom'
 import { useState } from 'react'
 export default function Sidebar(){
@@ -26,6 +27,7 @@ export default function Sidebar(){
                 <Link to='/admin/news' className='Link'><li className='list_items'><img src={Filter} alt='#' className='icon'/> <p>News</p></li></Link>
                 <Link to='/admin/posts' className='Link'><li className='list_items'><img src={Post} alt='#' className='icon'/> <p>Posts</p></li></Link>
                 <Link to='/admin/users' className='Link'><li className='list_items'><img src={User} alt='#' className='icon'/> <p>Users</p></li></Link>
+                <Link to='/admin/jobs' className='Link'><li className='list_items'><img src={Work} alt='#' className='icon'/> <p>Jobs</p></li></Link>
                 <Link to='/admin/contacts' className='Link'><li className='list_items'><img src={Swap} alt='#' className='icon'/> <p>Contacts</p></li></Link>
                 <Link to='/admin/settings' className='Link'><li className='list_items'><img src={Setting} alt='#' className='icon'/> <p>Settings</p></li></Link>
                 <li className='list_items'><button id='log_out' onClick={handleLogout}>Log Out</button></li>

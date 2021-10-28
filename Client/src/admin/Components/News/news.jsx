@@ -6,6 +6,8 @@ import { axiosInstance } from '../../../config';
 //notifs
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {Editor, EditorState} from 'draft-js';
+
 //main
 
 export default function Leads(){
@@ -15,6 +17,9 @@ export default function Leads(){
   const [mess, setMess] = useState('')
   const notify = () => toast(mess);
   const alertmess = () => toast("No data provided")
+  const [editorState, setEditorState] = useState(() =>
+  EditorState.createEmpty(),
+)
   const columns = [
     {
       title: "id",
@@ -33,7 +38,12 @@ export default function Leads(){
       field: "createdAt",
     }
   ];
-
+  const styles = {
+    editor: {
+      border: '1px solid gray',
+      minHeight: '6em'
+    }
+  };
   const [data, setdata]= useState([])
   useEffect(() => {
     const fetchNews = async () => {
@@ -53,12 +63,11 @@ export default function Leads(){
     const config = {
       headers: {"authorization":localStorage.getItem('token')}
     }
-    
-    console.log(Boolean(newsdata))
     if(Boolean(newsdata.title) && Boolean(newsdata.desc) && Boolean(newsdata.photo)){
     await axiosInstance.post('/news', newsdata, config)
 
     .then((res) => {
+      console.log(res)
       setMess(res.data.message)
       titleRef.current.value=''
       descRef.current.value=''
@@ -94,6 +103,7 @@ export default function Leads(){
                  
                 </select>
                 <textarea className='text_input' placeholder='Tell us your fascinating story' ref={descRef}></textarea>
+
                 <ToastContainer />
                 <button id ='submit' onClick={handleNews}>Submit</button>
               </div>

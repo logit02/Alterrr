@@ -20,16 +20,16 @@ export default function SingleWork(){
     return(
         <div className="singlePost">
         <div className="singlePostWrapper">
-          {job.photo && (
+          {job.team_photo && (
             <img
             className="singlePostImg"
-            src={job.photo}
+            src={job.team_photo}
             alt=""
             /> )}
         <h1 className="singlePostTitle">
         {job.job_title}  
         </h1>
-        <p className="postDesc">
+        <p className="postDescSingle">
           {job.description}
           
         </p>

@@ -16,8 +16,12 @@ const JobSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    photo:{
+    team_photo:{
         type:String,
+        required:false,
+    },
+    logo:{ 
+        type:String, 
         required:false,
     },
     description:{
@@ -30,7 +34,7 @@ const JobSchema = new mongoose.Schema({
     },
     experience:{
         type:String,
-        required:false
+        required:true
     }
 },{timestamps:true});
 

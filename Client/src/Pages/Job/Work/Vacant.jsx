@@ -7,8 +7,8 @@ export default function Vacant({job}){
     return(
         <div id='vacant'>
             <div id='image_part'>
-            {job.photo ? (
-                <img src={job.photo} alt='logo' id='logo'/>
+            {job.logo ? (
+                <img src={job.logo} alt='logo' id='logo'/>
                 ) : <img src={logo} alt='logo' id='logo'/> }
             </div>
             <div id='text_part'>
@@ -26,7 +26,7 @@ export default function Vacant({job}){
                 </div>
             </div>
             <div id='button_part'>
-                <button>Read More</button>
+                <button onClick={() => {window.location=`/job/${job._id}`}}>Read More</button>
             </div>
         </div>
     )

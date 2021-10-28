@@ -60,7 +60,7 @@ export default function Posts(){
     }
     
     return(
-        <div className='leads_wrapper'>
+        <div className='posts_wrapper'>
             <div className='top'>
                 <p className='posts_title'>Posts</p>
                 

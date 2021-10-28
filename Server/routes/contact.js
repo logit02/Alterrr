@@ -33,7 +33,7 @@ router.post('/',async(req,res)=> {
         const form = await new Contact(req.body);
         const savedForm = form.save();
         res.status(200).json({
-            message:"Response successfully submitted!"
+            message:"lol"
         })
     }catch(err){
         res.status(500).json({

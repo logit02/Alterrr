@@ -4,12 +4,32 @@ const cors = require('cors');
 router.use(cors());
 
 //verify
+const verify = (req,res,next) => {
+    const authHeader = req.headers.authorization;
+    if(authHeader) {
+        const token = authHeader
+        jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, payload) => {
+            if(err){
+                return res.status(403).json({
+                    error:true,
+                    message:"wrong token",
+                })
+            }
 
+            req.payload = payload; 
+            next()
+        })
+    }else{ 
+        res.status(401).json({
+            error:true,
+            message:"No header",
+        })
+    }
+}
 //get all jobs 
 router.get('/', async (req,res) => {
     try{ 
-        let jobs;
-        jobs=await Job.find();
+        let jobs=await Job.find();
         res.status(200).json(jobs)
     }catch(err){ 
         res.status(500).json(err);
@@ -17,7 +37,7 @@ router.get('/', async (req,res) => {
 })
 
 //add a post 
-router.post('/', async (req,res)=> {
+router.post('/', verify ,async (req,res)=> {
     const job = new Job(req.body);
     try{ 
       const savedJob =await job.save();
