@@ -35,7 +35,7 @@ jobs:
     - name: Build Docker Image
       working-directory: Client
       run: |
-        docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1
+        docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1 .
         
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1
