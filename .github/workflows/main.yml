@@ -26,19 +26,19 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
         password: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
-
+        
     - name: Build Docker Image
       working-directory: Client
       run: |
         docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1 .
+        
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1
 
-     - name: Build Docker Image
+    - name: Build Docker Image
       working-directory: Server
       run: |
         docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-0.0.1 .
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-prd
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-0.0.1
-
 
