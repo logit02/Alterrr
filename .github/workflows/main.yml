@@ -20,34 +20,25 @@ jobs:
     
     - name: Init
       run: |
-    
+
     - name: Login to Docker Hub
       uses: docker/login-action@v1
       with:
         username: ${{ secrets.DOCKER_REGISTRY_USERNAME }}
         password: ${{ secrets.DOCKER_REGISTRY_TOKEN }}
-    
-#     - name: Use Node.js
-#       uses: actions/setup-node@v1
-#       with:
-#         node-version: '16'
 
     - name: Build Docker Image
       working-directory: Client
       run: |
         docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1 .
-        
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd
         docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-0.0.1
-#     - name: Deploy To Production
-#       env: 
-#         IP: ${{ secrets.PRD_IP }}
-#         SSH_KEY: ${{ secrets.PRD_SSH_PRIVATE_KEY }}
-#       run: | 
-#         mkdir -p ~/.ssh
-#         touch ~/.ssh/id_rsa
-#         echo "${SSH_KEY}" >> ~/.ssh/id_rsa
-        
-#         ssh root@$IP "docker run -p 80:3000 $DOCKER_REGISTRY/$DOCKER_REPOSITORY:client-prd"
-        
+
+     - name: Build Docker Image
+      working-directory: Server
+      run: |
+        docker build -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-prd -t $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-0.0.1 .
+        docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-prd
+        docker push $DOCKER_REGISTRY/$DOCKER_REPOSITORY:server-0.0.1
+
 
