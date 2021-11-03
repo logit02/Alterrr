@@ -36,6 +36,8 @@ export default function Contacts(){
     fetchNews();  
     }, [])
 
+    
+
     return(
         <div className='contacts_wrapper'>
             <div className='top'>
