@@ -8,4 +8,6 @@ WORKDIR /app
 
 RUN npm install
 
+RUN ls -l
+
 ENTRYPOINT [ "node" , "index.js" ] 
